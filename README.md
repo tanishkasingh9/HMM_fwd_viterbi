@@ -7,7 +7,7 @@ Usually the data points we encounter in datasets like MNIST, PASCAL etc are assu
 To exploit the sequential patterns that occur in the data, we need a way to model the correlations between the observations. Markov models use the product rule to express the joint distribution for a sequence of observations, 
 <br>
 
-<img src="https://render.githubusercontent.com/render/math?math=P(x_1, x_2, ..., x_n) = \Pi^n_{i=2} \ p(x_i\ |\ x_1,..., x_i-1) " height="30" >
+<img src="https://render.githubusercontent.com/render/math?math=P(x_1, x_2, ..., x_n) = \Pi^n_{i=2} \ p(x_i\ |\ x_1,..., x_i-1) " height="30" align="center">
 
 The program contains following steps to run the above algorithms:
 1. 
