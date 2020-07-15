@@ -25,8 +25,7 @@ This algorithm capable of determining the probability of emitting a sequence of 
 <p align= "center">
 <img src="https://render.githubusercontent.com/render/math?math=P(X^T\ |\ \theta) = \Sigma_{n^T}\ p(X^T, Z^T)" height="30">
 </p>
-The time complexity of calculating the posterior with just one pass will be <img src="https://render.githubusercontent.com/render/math?math=O(n^T.T)"> 
-For a given sequence of T observations. The complexity can be reduced by calculating the following, 
+The time complexity of calculating the posterior with just one pass will be <img src="https://render.githubusercontent.com/render/math?math=O(n^T.T)"> for a given sequence of T observations. The complexity can be reduced to <img src="https://render.githubusercontent.com/render/math?math=O(n^2.T)"> using dynamic programming, 
 <p align= "center">
 <img src="https://render.githubusercontent.com/render/math?math=\alpha_j(t) = p(x_1,....x_t, z_t = j)" height="30">
   <br>
@@ -36,10 +35,9 @@ After completing this step, we backtrack through our trellis using the following
 <p align= "center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;\beta_i(t)&space;=&space;\begin{Bmatrix}&space;1&space;&&space;when\&space;t=T\\&space;\sum_{j=0}^{n}&space;a_{ij}&space;b_{jk}(x_{t&plus;1})\beta_{j}(t&plus;1)&space;&&space;when\&space;t<T&space;\end{Bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\large&space;\beta_i(t)&space;=&space;\begin{Bmatrix}&space;1&space;&&space;when\&space;t=T\\&space;\sum_{j=0}^{n}&space;a_{ij}&space;b_{jk}(x_{t&plus;1})\beta_{j}(t&plus;1)&space;&&space;when\&space;t<T&space;\end{Bmatrix}" title="\large \beta_i(t) = \begin{Bmatrix} 1 & when\ t=T\\ \sum_{j=0}^{n} a_{ij} b_{jk}(x_{t+1})\beta_{j}(t+1) & when\ t<T \end{Bmatrix}" /></a>
 </p>
-The program contains following steps to run the above algorithms:
-1. 
 
-Cheers!
+### Viterbi Algorithm
+
 
 ## References 
 
