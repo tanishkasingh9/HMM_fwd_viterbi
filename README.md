@@ -25,9 +25,12 @@ This algorithm capable of determining the probability of emitting a sequence of 
 <p align= "center">
 <img src="https://render.githubusercontent.com/render/math?math=P(X^T\ |\ \theta) = \Sigma_{n^T}\ p(X^T, Z^T)" height="30">
 </p>
-The time complexity of calculating the posterior with just one pass will be <img src="https://render.githubusercontent.com/render/math?math=O(n^T.T)"> for a given sequence of T observations. This is reduced by calculating the following, 
+The time complexity of calculating the posterior with just one pass will be <img src="https://render.githubusercontent.com/render/math?math=O(n^T.T)"> 
+<br>
+For a given sequence of T observations. The complexity can be reduced by calculating the following, 
 <p align= "center">
-<img src="https://render.githubusercontent.com/render/math?math=\alpha_j(t) = p(x_1,....x_t, z_t = j)" height="30">, at time step t.
+<img src="https://render.githubusercontent.com/render/math?math=\alpha_j(t) = p(x_1,....x_t, z_t = j)" height="30">
+<img src="https://render.githubusercontent.com/render/math?math=\alpha_j(t+1) = b_{jk}(x_{t+1}) \Sigma^n_{i=1} \ a_{ij}\alpha_i(t)" height="30">  
 </p>
 
 The program contains following steps to run the above algorithms:
