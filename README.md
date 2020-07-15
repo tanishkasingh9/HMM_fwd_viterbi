@@ -17,7 +17,7 @@ Assuming that the current observation only depends on the previous observation, 
 We can also create higher orders of markov models in a similar manner.
 
 ## Overview of Hidden Markov Model 
-Hidden Markov Models(HMM) are an extension of a mixture model, where there are various discrete multinomial variables that could be responsible for generating a particular observation in a sequence. The choice of picking a mixture component or hidden state for a particular observation depends on the choice of component for the previous observation. The transition probabilities are used to define this transition from previous hidden state to the current hidden state based on the observation denoted by A, using the conditional distribution of the observed variables <img src="https://render.githubusercontent.com/render/math?math= p(x_n|z_n,\phi)"> 
+Hidden Markov Models(HMM) are an extension of a mixture model, where there are various discrete multinomial latent variables that could be responsible for generating a particular observation in a sequence. The choice of picking a mixture component or hidden state for a particular observation depends on the choice of component for the previous observation. The transition probabilities are used to define this transition from previous hidden state to the current hidden state based on the observation denoted by A, using the conditional distribution of the observed variables <img src="https://render.githubusercontent.com/render/math?math=p(x_n|z_n,\phi)"> 
 The program contains following steps to run the above algorithms:
 1. 
 
