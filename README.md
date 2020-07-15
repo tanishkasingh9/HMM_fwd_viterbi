@@ -7,8 +7,17 @@ Usually the data points we encounter in datasets like MNIST, PASCAL etc are assu
 To exploit the sequential patterns that occur in the data, we need a way to model the correlations between the observations. Markov models use the product rule to express the joint distribution for a sequence of observations, 
 <br>
 <p align= "center">
-<img src="https://render.githubusercontent.com/render/math?math=P(x_1, x_2, ..., x_n) = \Pi^n_{i=2} \ p(x_i\ |\ x_1,..., x_i-1) " height="30">
+<img src="https://render.githubusercontent.com/render/math?math=P(x_1, x_2, ..., x_n) = \Pi^n_{i=2} \ p(x_i\ |\ x_1,..., x_{i-1}) " height="30">
 </p>
+Assuming that the current observation only depends on the previous observation, a _first-order Markov Chain_, and using _d-separation property_ to reduce the above equation we get, 
+<br>
+<p align= "center">
+<img src="https://render.githubusercontent.com/render/math?math=P(x_1, x_2, ..., x_n}) = p(x_1)\ \Pi^n_{i=2} \ p(x_i\ |\ x_{i-1}) " height="30">
+</p>
+We can also create higher orders of markov models in a similar manner.
+
+## Overview of Hidden Markov Model 
+ 
 The program contains following steps to run the above algorithms:
 1. 
 
