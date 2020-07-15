@@ -17,7 +17,16 @@ Assuming that the current observation only depends on the previous observation, 
 We can also create higher orders of markov models in a similar manner.
 
 ## Overview of Hidden Markov Model 
-Hidden Markov Models(HMM) are an extension of a mixture model, where there are various discrete multinomial latent variables that could be responsible for generating a particular observation in a sequence. The choice of picking a mixture component or hidden state for a particular observation depends on the choice of component for the previous observation. The transition probabilities are used to define this transition from previous hidden state to the current hidden state based on the observation denoted by A, using the conditional distribution of the observed variables <img src="https://render.githubusercontent.com/render/math?math=p(x_n|z_n,\phi)"> 
+Hidden Markov Models (HMM) are an extension of a mixture model, where there are various discrete multinomial latent variables that could be responsible for generating a particular observation in a sequence. The choice of picking a mixture component or hidden state for a particular observation depends on the choice of component for the previous observation. The transition probabilities are defined by this transition from previous hidden state to the current hidden state based on the observation denoted by A, and emission probabilities are defined by the conditional distribution of the observed variables <img src="https://render.githubusercontent.com/render/math?math=p(x_n|z_n,\phi)"> for each latent variable denoted by B. HMMs in general are not susceptible to local warping and variability in generations, making it an excellent choice for speech recognition, handwriting generation etc. 
+
+### Forward Backward (Baum-Welch) Algorithm 
+This algorithm capable of determining the probability of emitting a sequence of observation given the parameters (z,x,A,B) of a HMM, using a two stage message passing system. It is used when we know the sequence of observation but don't know the sequence of hidden states that generates the sequence of observation in question. Let us represent the sequence of observation with X and parameters using theta,
+
+<p align= "center">
+<img src="https://render.githubusercontent.com/render/math?math=P(X^T\ |\ \theta) = \Sigma_{n^T}\ p(X^T, Z^T)" height="30">
+</p>
+The time complexity of calculating the posterior with just one pass will be <img src="https://render.githubusercontent.com/render/math?math=O(n^T.T)> for a given sequence of T observations. 
+
 The program contains following steps to run the above algorithms:
 1. 
 
