@@ -9,7 +9,7 @@ To exploit the sequential patterns that occur in the data, we need a way to mode
 <p align= "center">
 <img src="https://render.githubusercontent.com/render/math?math=P(x_1, x_2, ..., x_n) = \Pi^n_{i=2} \ p(x_i\ |\ x_1,..., x_{i-1}) " height="30">
 </p>
-Assuming that the current observation only depends on the previous observation, a _first-order Markov Chain_, and using _d-separation property_ to reduce the above equation we get, 
+Assuming that the current observation only depends on the previous observation, a *first-order Markov Chain*, and using *d-separation property* to reduce the above equation we get, 
 <br>
 <p align= "center">
 <img src="https://render.githubusercontent.com/render/math?math=P(x_1, x_2, ..., x_n}) = p(x_1)\ \Pi^n_{i=2} \ p(x_i\ |\ x_{i-1}) " height="30">
