@@ -35,7 +35,7 @@ For a given sequence of T observations. The complexity can be reduced by calcula
 </p>
 After completing this step, we backtrack through our trellis using the following function, 
 <p align= "center">
-<img src="https://render.githubusercontent.com/render/math?math="\beta_i(t) = \begin{Bmatrix} 1 & when\ t=T\\ \sum_{j=0}^{n} a_{ij} b_{jk}(x_{t+1})\beta_{j}(t+1) & when\ t<T \end{Bmatrix}" height="30">
+<a href="https://www.codecogs.com/eqnedit.php?latex=\beta_i(t)&space;=&space;\begin{Bmatrix}&space;1&space;&&space;when\&space;t=T\\&space;\sum_{j=0}^{n}&space;a_{ij}&space;b_{jk}(x_{t&plus;1})\beta_{j}(t&plus;1)&space;&&space;when\&space;t<T&space;\end{Bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta_i(t)&space;=&space;\begin{Bmatrix}&space;1&space;&&space;when\&space;t=T\\&space;\sum_{j=0}^{n}&space;a_{ij}&space;b_{jk}(x_{t&plus;1})\beta_{j}(t&plus;1)&space;&&space;when\&space;t<T&space;\end{Bmatrix}" title="\beta_i(t) = \begin{Bmatrix} 1 & when\ t=T\\ \sum_{j=0}^{n} a_{ij} b_{jk}(x_{t+1})\beta_{j}(t+1) & when\ t<T \end{Bmatrix}" /></a>
 </p>
 The program contains following steps to run the above algorithms:
 1. 
