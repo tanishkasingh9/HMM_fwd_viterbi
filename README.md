@@ -37,7 +37,7 @@ After completing this step, we backtrack through our trellis using the following
 </p>
 
 ### Viterbi Algorithm
-
+For finding the most probable sequence of hidden states, we use max-sum algorithm known as Viterbi algorithm for HMMs. It searches the space of paths (possible sequences) efficiently with a computational cost that grows linearly with the length of chain. We again use the variables z to represent the hidden states, x to represent the observed sequence, n as the number of hidden states, and T as the length of the observed sequence. 
 
 ## References 
 
