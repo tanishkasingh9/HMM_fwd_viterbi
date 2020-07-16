@@ -1,4 +1,4 @@
-# Run Forward Backward and Viterbi Algorithms on defined HMM
+# Run Forward Backward and Viterbi Algorithms on defined HMMs
 
 ## Why have such a model?
 Usually the data points we encounter in datasets like MNIST, PASCAL etc are assumed to independent and identically distributed. This allows us to apply likelihood function across the data points to model probability distribution. But there are examples of data instances for which making this assumption would clearly be wrong, more specifically time series data points. Time series data is sequential in nature and not all examples of sequential data are time series, some examples for this kind of dataset are accoustic features in speech, sequence of characters, sequence of nucleotide base pairs in a DNA strand etc. 
