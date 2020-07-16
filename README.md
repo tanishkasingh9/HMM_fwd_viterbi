@@ -25,7 +25,7 @@ This algorithm capable of determining the probability of emitting a sequence of 
 <p align= "center">
 <img src="https://render.githubusercontent.com/render/math?math=P(X^T\ |\ \theta) = \Sigma_{n^T}\ p(X^T, Z^T)" height="30">
 </p>
-The time complexity of calculating the posterior with just one pass will be <a href="https://www.codecogs.com/eqnedit.php?latex=O(n^TT)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?O(n^TT)" title="O(n^TT)" /></a> for a given sequence of T observations. The complexity can be reduced to  using dynamic programming, 
+The time complexity of calculating the posterior with just one pass will be <a href="https://www.codecogs.com/eqnedit.php?latex=\small&space;O(n^TT)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\small&space;O(n^TT)" title="\small O(n^TT)" /></a> for a given sequence of T observations. The complexity can be reduced to <a href="https://www.codecogs.com/eqnedit.php?latex=\small&space;O(n^2T)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\small&space;O(n^2T)" title="\small O(n^2T)" /></a>, using dynamic programming, 
 <p align= "center">
 <img src="https://render.githubusercontent.com/render/math?math=\alpha_j(t) = p(x_1,....x_t, z_t = j)" height="30">
   <br>
