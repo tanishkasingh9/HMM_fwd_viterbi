@@ -48,7 +48,7 @@ This can again be solved by the means of dynamic programming, as the current sta
 <p align= "center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;\mu(Z_i)&space;=&space;max_{Z_{0:i-1}}&space;P(Z_{0:i},&space;X_{0:i})\\&space;\mu(Z_i)&space;=&space;max_{Z_{i-1}}&space;\mu(Z_{i-1})P(Z_i|Z_{i-1})P(X_i|Z_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\large&space;\mu(Z_i)&space;=&space;max_{Z_{0:i-1}}&space;P(Z_{0:i},&space;X_{0:i})\\&space;\mu(Z_i)&space;=&space;max_{Z_{i-1}}&space;\mu(Z_{i-1})P(Z_i|Z_{i-1})P(X_i|Z_i)" title="\large \mu(Z_i) = max_{Z_{0:i-1}} P(Z_{0:i}, X_{0:i})\\ \mu(Z_i) = max_{Z_{i-1}} \mu(Z_{i-1})P(Z_i|Z_{i-1})P(X_i|Z_i)" /></a>
 </p>
-We can see from the final formula that the last two probability terms are nothing but the transition probability and the emission probabilities. The runtime complexity comes down to be <img src="https://render.githubusercontent.com/render/math?math=O(n^2.T)"> using dynamic algorithm. 
+We can see from the final formula that the last two probability terms are nothing but the transition probability and the emission probabilities. The runtime complexity comes down to be <a href="https://www.codecogs.com/eqnedit.php?latex=\small&space;O(n^2T)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\small&space;O(n^2T)" title="\small O(n^2T)" /></a> using dynamic algorithm. 
 
 ## References 
 1.  Rabiner LR (February 1989). "A tutorial on hidden Markov models and selected applications in speech recognition". Proceedings of the IEEE. 77 (2): 257–286. CiteSeerX 10.1.1.381.3454. doi:10.1109/5.18626. (Describes the forward algorithm and Viterbi algorithm for HMMs).
