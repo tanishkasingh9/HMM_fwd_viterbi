@@ -37,7 +37,18 @@ After completing this step, we backtrack through our trellis using the following
 </p>
 
 ### Viterbi Algorithm
-For finding the most probable sequence of hidden states, we use max-sum algorithm known as Viterbi algorithm for HMMs. It searches the space of paths (possible sequences) efficiently with a computational cost that grows linearly with the length of chain. We again use the variables z to represent the hidden states, x to represent the observed sequence, n as the number of hidden states, and T as the length of the observed sequence. 
+For finding the most probable sequence of hidden states, we use max-sum algorithm known as Viterbi algorithm for HMMs. It searches the space of paths (possible sequences) efficiently with a computational cost that grows linearly with the length of chain. We again use the variables z to represent the hidden states, x to represent the observed sequence, n as the number of hidden states, and T as the length of the observed sequence. Our objective is to find the states that maximize the conditional proabbility of states given sequence of observation, 
+<br>
+
+<p align= "center">
+  <a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;Z^*_{0:T}&space;=&space;argmax_{Z_{0:T}}&space;P(Z_{0:T}&space;|&space;X_{0:T})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\large&space;Z^*_{0:T}&space;=&space;argmax_{Z_{0:T}}&space;P(Z_{0:T}&space;|&space;X_{0:T})" title="\large Z^*_{0:T} = argmax_{Z_{0:T}} P(Z_{0:T} | X_{0:T})" /></a>
+</p>
+
+This can again be solved by the means of dynamic programming, as the current state in a HMM only depends on the previous state. We define a function to represent the maximum joint probability of getting an intermediate observation of the sequence and hidden state as follows:
+<p align= "center">
+<a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;\mu(Z_i)&space;=&space;max_{Z_{0:i-1}}&space;P(Z_{0:i},&space;X_{0:i})\\&space;\mu(Z_i)&space;=&space;max_{Z_{i-1}}&space;\mu(Z_{i-1})P(Z_i|Z_{i-1})P(X_i|Z_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\large&space;\mu(Z_i)&space;=&space;max_{Z_{0:i-1}}&space;P(Z_{0:i},&space;X_{0:i})\\&space;\mu(Z_i)&space;=&space;max_{Z_{i-1}}&space;\mu(Z_{i-1})P(Z_i|Z_{i-1})P(X_i|Z_i)" title="\large \mu(Z_i) = max_{Z_{0:i-1}} P(Z_{0:i}, X_{0:i})\\ \mu(Z_i) = max_{Z_{i-1}} \mu(Z_{i-1})P(Z_i|Z_{i-1})P(X_i|Z_i)" /></a>
+</p>
+We can see from the final formula that the last two probability terms are nothing but the transition probability and the emission probabilities. The runtime complexity comes down to be <img src="https://render.githubusercontent.com/render/math?math=O(n^2.T)"> using dynamic algorithm. 
 
 ## References 
 
